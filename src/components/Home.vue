@@ -104,6 +104,7 @@ export default {
         >img
           width 100%
           height 100%
+          margin-top 4px
       .list_content
         margin-top 25px 
         box-sizing border-box
