@@ -15,7 +15,6 @@
           <p class="warehouse_text2">供应链</p>
           <p class="warehouse_text3">质量审核</p>
       </div>
-      <div></div>
   </div>
 </template>
 

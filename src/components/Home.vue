@@ -27,7 +27,7 @@
             </div>
             <!-- 鼠标移入显示区域 -->
             <div class="qr_show1">
-              <img src="https://i.picsum.photos/id/20/200/200.jpg" alt="">
+              <img src="../assets/images/anzhuo1.png" alt />
             </div>
           </button>
           <button>
@@ -37,7 +37,7 @@
             </div>
             <!-- 鼠标移入显示区域 -->
             <div class="qr_show2">
-              <img src="https://i.picsum.photos/id/20/200/200.jpg" alt="">
+              <img src="../assets/images/ios1.png" alt />
             </div>
           </button>
         </div>
@@ -64,7 +64,7 @@
 
 <script type="text/ecmascript-6">
 import Footer from "./Footer";
-import Liangqin from './Liangqin'
+import Liangqin from "./Liangqin";
 export default {
   components: {
     Footer,
@@ -81,129 +81,195 @@ export default {
 };
 </script>
 
-<style lang="stylus" scoped> 
-#banner_content
-  width 100%
-  overflow hidden
-  .page_list
-    width 100%
-    height 650px
-    background url("../assets/images/banner.png")
-    background-repeat: no-repeat
-    .page_header
-      width 100%
-      height 104px
-      padding-left 373px
-      padding-right 355px
-      box-sizing border-box
-      display flex
-      justify-content space-between
-      .img_content
-        width 108px
-        height 60px
-        >img
-          width 100%
-          height 100%
-          margin-top 4px
-      .list_content
-        margin-top 25px 
-        box-sizing border-box
-        .swiper_content
-          display flex
-          justify-content space-between
-          >li
-            font-size 21px
-            font-family MicrosoftYaHei
-            font-weight 400
-            color #FFFFFF
-            margin-left 24px
-            cursor pointer
-          .cancel
-            margin-left 0px
-    .img_container
-      width 100%
-      >img 
-        margin-left 489px
-    .seed
-      width 100%
-      >span  
-        display block
-        font-size 66.67px
-        color #FFFFFF
-        font-family "SourceHanSansCN-Regular"
-        font-weight 400
-        margin-left 500px
-    .btn_setting
-      margin-left 497px
-      margin-top 47px
-      position relative
-      .btn_download
-        width 447px
-        height 50px
-        display flex
-        justify-content space-between
-        >button:nth-child(1),>button:nth-child(2)
-          width 200px
-          height 50px
-          margin: 0
-          padding: 0
-          border: 1px solid transparent
-          outline: none
-          border-radius 5px
-          background-color  #FFAD60
-          .btn_title
-            display flex
-            justify-content space-around
-            align-items: center
-            position: relative
-            margin-bottom 2px
-            >img
-              width 28px
-              height 31px
-              margin-left 28px
-            >span 
-              font-size 25px
-              font-family "SourceHanSansCN-Normal"
-              font-weight Normal
-              color #fff
-              margin-right 25px
-          .qr_show1,.qr_show2
-            position absolute
-            top 60px
-            display none
-            z-index 10
-    .btn_setting >.btn_download >button:nth-child(1):hover .qr_show1
-        display block
-    .btn_setting >.btn_download >button:nth-child(2):hover .qr_show2
-        display block
-    .new_user
-      width 100%
-      height 60px
-      margin 90px 638px 80px 646px
-      position relative
-      .user_title
-        width 636px
-        height 60px
-        background-color #FFFFFF
-        border-radius 35px
-        text-align center
-        line-height 60px
-        >p
-          font-size 41.67px
-          color #FFAD60
-          cursor pointer
-    .surprise
-      .surprise_content
-        width 100%
-        height 37px
-        >p
-          text-align center
-          font-family "SourceHanSansCN-Regular"
-          font-weight 400
-          color #FFFFFF
-          font-size 33.33px
-          position absolute
-          left 681px
-          bottom 297px
+<style lang="stylus" scoped>#banner_content {
+  width: 100%;
+  overflow: hidden;
 
+  .page_list {
+    width: 100%;
+    height: 650px;
+    background: url('../assets/images/banner.png');
+    background-repeat: no-repeat;
+    background-size: 100% 650px;
+
+    .page_header {
+      width: 100%;
+      height: 104px;
+      padding-left: 373px;
+      padding-right: 355px;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+
+      .img_content {
+        width: 108px;
+        height: 60px;
+
+        >img {
+          width: 100%;
+          height: 100%;
+          margin-top: 4px;
+        }
+      }
+
+      .list_content {
+        margin-top: 25px;
+        box-sizing: border-box;
+
+        .swiper_content {
+          display: flex;
+          justify-content: space-between;
+
+          >li {
+            font-size: 21px;
+            font-family: MicrosoftYaHei;
+            font-weight: 400;
+            color: #FFFFFF;
+            margin-left: 24px;
+            cursor: pointer;
+          }
+
+          .cancel {
+            margin-left: 0px;
+          }
+        }
+      }
+    }
+
+    .img_container {
+      width: 100%;
+
+      >img {
+        margin-left: 489px;
+        width: 551px;
+        height: 129px;
+      }
+    }
+
+    .seed {
+      width: 100%;
+
+      >span {
+        display: block;
+        font-size: 66.67px;
+        color: #FFFFFF;
+        font-family: 'SourceHanSansCN-Regular';
+        font-weight: 400;
+        margin-left: 500px;
+      }
+    }
+
+    .btn_setting {
+      margin-left: 497px;
+      margin-top: 47px;
+      position: relative;
+
+      .btn_download {
+        width: 447px;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+
+        >button:nth-child(1), >button:nth-child(2) {
+          width: 200px;
+          height: 50px;
+          margin: 0;
+          padding: 0;
+          border: 1px solid transparent;
+          outline: none;
+          border-radius: 5px;
+          background-color: #FFAD60;
+
+          .btn_title {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: relative;
+            margin-bottom: 2px;
+
+            >img {
+              width: 28px;
+              height: 31px;
+              margin-left: 28px;
+            }
+
+            >span {
+              font-size: 25px;
+              font-family: 'SourceHanSansCN-Normal';
+              font-weight: Normal;
+              color: #fff;
+              margin-right: 25px;
+            }
+          }
+
+          .qr_show1, .qr_show2 {
+            position: absolute;
+            top: 60px;
+            display: none;
+            z-index: 10;
+          }
+        }
+      }
+    }
+
+    .qr_show1 >img {
+      width: 200px;
+      height: 200px;
+    }
+
+    .qr_show2 >img {
+      width: 200px;
+      height: 200px;
+    }
+
+    .btn_setting >.btn_download >button:nth-child(1):hover .qr_show1 {
+      display: block;
+    }
+
+    .btn_setting >.btn_download >button:nth-child(2):hover .qr_show2 {
+      display: block;
+    }
+
+    .new_user {
+      width: 100%;
+      height: 60px;
+      margin: 90px 638px 80px 646px;
+      position: relative;
+
+      .user_title {
+        width: 636px;
+        height: 60px;
+        background-color: #FFFFFF;
+        border-radius: 35px;
+        text-align: center;
+        line-height: 60px;
+
+        >p {
+          font-size: 41.67px;
+          color: #FFAD60;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .surprise {
+      .surprise_content {
+        width: 100%;
+        height: 37px;
+        position: relative;
+
+        >p {
+          text-align: center;
+          font-family: 'SourceHanSansCN-Regular';
+          font-weight: 400;
+          color: #FFFFFF;
+          font-size: 33.33px;
+          position: absolute;
+          left: 36%;
+          bottom: 166%;
+        }
+      }
+    }
+  }
+}
 </style>

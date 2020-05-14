@@ -1,7 +1,6 @@
 <template>
   <div id="company_container">
       <div class="top_img">
-          
       </div>
       <div class="right_img">
           <img src="../assets/images/bahaodicangchu.png" alt="">

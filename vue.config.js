@@ -2,10 +2,20 @@
 const px2rem = require("postcss-px2rem");
 const postcss = px2rem({
   remUnit: 192 //1920px
+  // remPrecision: 5
 });
 module.exports = {
   devServer: {
     open: true,
-    port: 7878
+    port: 8888
+  },
+  css: { // 添加postcss配置
+    loaderOptions: {
+      postcss: {
+        plugins: [
+          postcss
+        ]
+      }
+    }
   }
 };
