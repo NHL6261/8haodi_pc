@@ -9,7 +9,7 @@
     </div>
     <div class="forty_right">
       <p>八号地百香果干、黄桃干、菠萝干、芒果干、草莓干上架</p>
-      <img src="../assets/images/BF5814C7-A5D5-4773-8330-495771114DF2.png" alt="此图片暂时无法显示" />
+      <img src="../assets/images/about_us.png" alt="此图片暂时无法显示" />
     </div>
   </div>
 </template>

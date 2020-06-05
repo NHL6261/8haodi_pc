@@ -40,7 +40,7 @@ export default {};
 }
 .ninety_right > p {
   font-size: 42px;
-  font-family: Source Han Sans CN;
+  font-family: "Source Han Sans CN";
   font-weight: 500;
   color: rgba(96, 96, 96, 1);
   position: absolute;
@@ -63,7 +63,7 @@ export default {};
   font-weight: 400;
   color: rgba(96, 96, 96, 1);
   position: absolute;
-  right: 145px;
+  left: -4%;
   top: 0;
   text-align: right;
 }
@@ -71,7 +71,7 @@ export default {};
   width: 400px;
   height: 249px;
   position: absolute;
-  right: 24%;
+  right: 34%;
   bottom: 20%;
 }
 .sphere {

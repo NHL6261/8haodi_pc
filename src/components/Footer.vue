@@ -1,43 +1,55 @@
 <template>
-  <div id="footer_swiper">
-    <!-- 头部信息 -->
-    <div class="footer_top">
-      <!-- 最左侧图片区域 -->
-      <div class="footer_left_img">
-        <img src="../assets/images/logo.png" alt />
+  <div id="footer_container">
+    <div class="total_container">
+      <div class="top_container">
+        <div class="left_logo">
+          <img src="../assets/images/logo.png" alt="此图片暂时无法显示" />
+        </div>
+        <div class="center_text">
+          <p>北京地址：北京市丰台区金茂广场3号楼1001室</p>
+          <p>合肥地址：安徽省合肥市包河区滨湖金融港B3座501室</p>
+          <p>北京电话：010-64222400/合肥电话：400-818-5900</p>
+          <p>公司邮箱：8haodi@8haodi.com</p>
+        </div>
+        <div class="right_qr">
+          <div class="big_qr">
+            <div class="whilt_container">
+              <img src="../assets/footer_images/anzhuo.png" alt="此图片暂时无法显示">
+            </div>
+            <div class="qr_text">
+              <p>安卓下载</p>
+            </div>
+          </div>
+          <div class="big_qr">
+            <div class="whilt_container1">
+              <img src="../assets/footer_images/ios.png" alt="此图片暂时无法显示">
+            </div>
+            <div class="qr_text">
+              <p>iOS下载</p>
+            </div>
+          </div>
+          <div class="big_qr">
+            <div class="whilt_container2">
+              <img src="../assets/footer_images/nopublic.jpg" alt="">
+            </div>
+            <div class="qr_text">
+              <p>微信公众号</p>
+            </div>
+          </div>
+          <div class="big_qr" style="margin-right: 0px">
+            <div class="whilt_container3">
+              <img src="../assets/footer_images/weibo.jpg" alt="">
+            </div>
+            <div class="qr_text">
+              <p>微博官方号</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <!-- 中间详情区域 -->
-      <div class="footer_center_detail">
-        <p>北京地址：北京市丰台区金茂广场3号楼1001室</p>
-        <p>合肥地址：安徽省合肥市包河区滨湖金融港B3座501室</p>
-        <p>北京电话：010-64222400 / 合肥电话：400-818-5900</p>
-        <p>公司邮箱：8haodi@8haodi.com</p>
+      <div class="cernter_container"></div>
+      <div class="bottom_container">
+        <p>© 8haodi.com. All Rights Reserved. 京ICP备16001304号</p>
       </div>
-      <!-- 最右侧二维码扫描区域 -->
-      <div class="footer_right_qr">
-        <div class="Android_content">
-          <div class="Android_top"></div>
-          <span>安卓下载</span>
-        </div>
-        <div class="Android_content">
-          <div class="Android_top"></div>
-          <span>Ios下载</span>
-        </div>
-        <div class="Android_content">
-          <div class="Android_top"></div>
-          <span>微信公众号</span>
-        </div>
-        <div class="Android_content" :style="'margin-right:0px'">
-          <div class="Android_top"></div>
-          <span>微博官方号</span>
-        </div>
-      </div>
-    </div>
-    <!-- 中间的线 -->
-    <div class="footer_center_line"></div>
-    <!-- 底部备注信息 -->
-    <div class="footer_remarks">
-      <p>© 8haodi.com. All Rights Reserved. 京ICP备16001304号</p>
     </div>
   </div>
 </template>
@@ -47,77 +59,79 @@ export default {};
 </script>
 
 <style lang="less" scoped>
-#footer_swiper {
+#footer_container {
   width: 100%;
-  height: 152px;
+}
+.total_container {
+  width: 100%;
+  height: 304px;
   background-color: #444444;
 }
-.footer_top {
+.top_container {
   width: 100%;
-  height: 113.5px;
-  padding: 0px 175px 0px 177px;
+  height: 227px;
+  padding: 36px 320px 43px 320px;
   box-sizing: border-box;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
-.footer_left_img {
-  width: 113.5px;
-  height: 63px;
-  margin-top: 18px;
-  margin-right: 12px;
-}
-.footer_left_img > img {
-  width: 113.5px;
-  height: 63px;
-}
-.footer_center_detail {
-  margin-top: 24px;
-  margin-right: 12px;
-}
-.footer_center_detail > p {
-  font-size: 10px;
-  font-family: "SourceHanSansCN-Normal";
-  font-weight: 400;
-  color: rgba(255, 255, 255, 1);
-  line-height: 19px;
-}
-.footer_right_qr {
-  display: flex;
-  margin-top: 23.5px;
-}
-.Android_content {
-  margin-right: 7.5px;
-}
-.Android_top {
-  width: 60px;
-  height: 60px;
-  background-color: #fff;
-}
-.Android_content > span {
-  display: block;
-  color: #ffffff;
-  font-size: 10px;
-  font-family: Source Han Sans CN;
-  font-weight: 400;
-  color: rgba(255, 255, 255, 1);
-  text-align: center;
-  line-height: 20px;
-}
-.footer_center_line {
+.cernter_container {
   width: 100%;
-  height: 2px;
+  height: 4px;
   background-color: #606060;
 }
-.footer_remarks {
+.bottom_container {
   width: 100%;
-  height: 36.5px;
+  height: 73px;
   text-align: center;
-  line-height: 36.5px;
+  line-height: 73px;
 }
-.footer_remarks > p {
-  font-size: 10px;
-  font-family: Source Han Sans CN;
+.bottom_container > p {
+  font-size: 21px;
+  font-family:"Source Han Sans CN";
   font-weight: 400;
   color: rgba(125, 125, 125, 1);
+}
+.left_logo {
+  width: 227px;
+  height: 126px;
+}
+.left_logo > img {
+  width: 227px;
+  height: 126px;
+}
+.center_text > p {
+  font-size: 21px;
+  font-family: "Source Han Sans CN";
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+}
+.right_qr {
+  display: flex;
+  justify-content: space-between;
+}
+.big_qr {
+  text-align: center;
+  margin-right: 16px;
+}
+.whilt_container,.whilt_container1,.whilt_container2,.whilt_container3{
+  width: 100px;
+  height: 100px;
+  background-color: #ededed;
+}
+.whilt_container> img, .whilt_container1> img,.whilt_container2>img,.whilt_container3>img {
+  width: 100px;
+  height: 100px;
+}
+
+
+.qr_text {
+  margin-top: 15px;
+}
+.qr_text > p {
+  font-size: 21px;
+  font-family: " Source Han Sans CN";
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
 }
 </style>

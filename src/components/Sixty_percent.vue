@@ -39,7 +39,7 @@ export default {};
   font-weight: 400;
   color: rgba(96, 96, 96, 1);
   position: absolute;
-  right: 182px;
+  left: -16%;
   top: 0;
   text-align: right;
 }

@@ -10,11 +10,11 @@
           <p>高效抢单，不错过任何生意</p>
         </div>
         <div class="left_text">
-          <p>便捷抢单</p>
+          <p>抢单结算</p>
           <p>抢单商分清晰可见</p>
         </div>
         <div class="left_text">
-          <p>便捷抢单</p>
+          <p>支持放弃订单</p>
           <p>无法配送，随时放弃</p>
         </div>
       </div>
@@ -34,6 +34,7 @@ export default {};
   width: 100%;
   height: 996px;
   background-image: url("../assets/images/配送-背景.png");
+  background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 .delivery_header {
@@ -85,5 +86,13 @@ export default {};
   font-family: Microsoft YaHei;
   font-weight: 400;
   color: rgba(96, 96, 96, 1);
+}
+.delivery_right{
+  width: 712px;
+  height: 591px;
+}
+.delivery_right >img{
+  width: 712px;
+  height: 591px;
 }
 </style>

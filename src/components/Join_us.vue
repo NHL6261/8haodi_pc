@@ -6,10 +6,10 @@
       </div>
       <div class="join_title">
         <div class="title_top">
-          <p>加入我们 共同成长</p>
+          <p>携手启程 领跑未来</p>
         </div>
         <div class="title_bottom">
-          <p>我们提供广阔的成长空间，丰厚的福利待遇，等你来创造新零售领域未来</p>
+          <p>我们提供广阔的成长空间，丰厚的福利待遇，与你来创造新零售领域未来</p>
         </div>
       </div>
     </div>
@@ -17,7 +17,7 @@
     <div class="join_atmosphere">
       <div class="atmosphere_header">
         <p>我们的工作氛围</p>
-        <p>在八号地，我们用专业的精神，激情满满，努力拼搏，创造更广阔的的天地。</p>
+        <p>在八号地大家庭，拥有一流的专业团队，工作上大家充满激情，一起努力，携手共创美好未来</p>
       </div>
       <div class="atmposphere_main">
         <div class="passion">
@@ -63,7 +63,9 @@
       </div>
     </div>
     <!-- 我们的工作环境 -->
-    <Working></Working>
+    <keep-alive>
+      <Working></Working>
+    </keep-alive>
   </div>
 </template>
 
@@ -108,9 +110,10 @@ export default {
   font-family: Source Han Sans CN;
   font-weight: bold;
   color: rgba(255, 255, 255, 1);
+  letter-spacing: 5px;
 }
 .title_bottom > p {
-  font-size: 20px;
+  font-size: 22px;
   font-family: Source Han Sans CN;
   font-weight: 400;
   color: rgba(255, 255, 255, 1);
@@ -122,7 +125,7 @@ export default {
 }
 .atmosphere_header {
   width: 100%;
-  height: 175px;
+  height: 200px;
   text-align: center;
   position: relative;
 }
@@ -133,21 +136,26 @@ export default {
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
+  margin-top: 25px;
 }
 .atmposphere_main > .passion {
   width: 306px;
   height: 400px;
   background-image: url("../assets/images/激情背景.png");
+  background-size: 306px 400px;
   background-repeat: no-repeat;
 }
 .atmposphere_main > .passion:nth-child(2) {
   background-image: url("../assets/images/协作-背景.png");
+   background-size: 306px 400px;
 }
 .atmposphere_main > .passion:nth-child(3) {
   background-image: url("../assets/images/高效-背景.png");
+   background-size: 306px 400px;
 }
 .atmposphere_main > .passion:nth-child(4) {
   background-image: url("../assets/images/创新-背景.png");
+   background-size: 306px 400px;
 }
 .atmposphere_main > .passion .passion_icon > .icon {
   width: 306px;
@@ -196,7 +204,7 @@ export default {
   line-height: 24px;
   position: absolute;
   left: 50%;
-  bottom: 40%;
+  bottom: 39%;
   transform: translate(-50%);
 }
 .atmosphere_header p:nth-child(2) {
@@ -207,7 +215,7 @@ export default {
   line-height: 30px;
   position: absolute;
   left: 50%;
-  bottom: 13%;
+  bottom: 11%;
   transform: translate(-50%);
 }
 </style>

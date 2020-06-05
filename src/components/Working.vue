@@ -6,13 +6,27 @@
     </div>
     <div class="jiange"></div>
     <!-- 轮播图区域 -->
-    <!-- <div class="working_carousel">
-      <el-carousel :interval="2000" type="card" height="400px">
-        <el-carousel-item v-for="item in imagesbox" :key="item">
-          <img class="images" :src="item.idView" />
-        </el-carousel-item>
-      </el-carousel>
-    </div>-->
+    <div class="carousel_container">
+      <carousel-3d
+        :autoplay="true"
+        :autoplayTimeout="2000"
+        :perspective="35"
+        :animationSpeed="500"
+        :width="520"
+        :height="280"
+        :controlsHeight="60"
+      >
+        <slide v-for="(slide, i) in slides" :index="i" :key="i">
+          <template slot-scope="{ index, isCurrent, leftIndex, rightIndex }">
+            <img
+              :data-index="index"
+              :class="{ current: isCurrent, onLeft: (leftIndex >= 0), onRight: (rightIndex >=0)}"
+              :src="slide.src"
+            />
+          </template>
+        </slide>
+      </carousel-3d>
+    </div>
     <!-- 我们寻找的人 -->
     <div class="working_looking">
       <div class="looking_title">
@@ -22,7 +36,13 @@
         <div class="main_content">
           <div class="content_title">
             <p>如果你</p>
-            <p>有梦想，勇于行动 有才能，期待发挥 有态度，脚踏实地 我们给你提供发挥自我价值的平台 在新零售互联平台一起成长</p>
+            <div class="leigh">
+              <p>有梦想，勇于行动</p>
+              <p>有才能，期待发挥</p>
+              <p>有态度，脚踏实地</p>
+              <p>我们给你提供发挥自我价值的平台</p>
+              <p>在新零售互联平台一起成长</p>
+            </div>
           </div>
         </div>
         <div class="main_img">
@@ -36,21 +56,22 @@
 </template>
 
 <script type="text/ecmascript-6">
-import carousel from "./Carousel";
 import Forward from "./look_forward";
-import Sattistics from "./Statistics";
+import { Swiper, SwiperSlide, directive } from "vue-awesome-swiper";
+import { Carousel3d, Slide } from "vue-carousel-3d";
+import "swiper/css/swiper.css";
 export default {
   components: {
-    carousel,
     Forward,
-    Sattistics
+    Carousel3d,
+    Slide
   },
   data() {
     return {
-      imagesbox: [
-        { id: 0, idView: require("../assets/images/1.png") },
-        { id: 1, idView: require("../assets/images/2.png") },
-        { id: 2, idView: require("../assets/images/3.png") }
+      slides: [
+        { src: require("../assets/images/1.png") },
+        { src: require("../assets/images/2.png") },
+        { src: require("../assets/images/3.png") },
       ]
     };
   }
@@ -65,22 +86,22 @@ export default {
   margin: 0;
 }
 .el-carousel__item:nth-child(2n) {
-  background-color: red;
+  background-color: #99a9bf;
 }
 .el-carousel__item:nth-child(2n + 1) {
-  background-color: blue;
+  background-color: #d3dce6;
 }
-
 #working_container {
   width: 100%;
   height: 600px;
 }
 .working_title {
   text-align: center;
+  margin-top: 96px;
 }
 .working_title p:nth-child(1) {
   font-size: 36px;
-  font-family: Microsoft YaHei;
+  font-family: "Microsoft YaHei";
   font-weight: bold;
   color: rgba(35, 35, 35, 1);
 }
@@ -123,18 +144,19 @@ export default {
   width: 561px;
   height: 507px;
   float: right;
+  margin-right: 50px;
   padding: 134px 291px 140px 0;
   box-sizing: border-box;
 }
 .working_carousel {
   width: 100%;
-  height: 500px;
+  height: 410px;
   padding: 0px 320px;
   box-sizing: border-box;
 }
-.images {
-  width: 100%;
-  height: 100%;
+.working_carousel > img {
+  width: 632px;
+  height: 390px;
 }
 .working_looking
   > .looking_main
@@ -146,16 +168,13 @@ export default {
   font-weight: bold;
   color: rgba(35, 35, 35, 1);
 }
-.working_looking
-  > .looking_main
-  > .main_content
-  .content_title
-  > p:nth-child(2) {
+.working_looking > .looking_main > .main_content .content_title > .leigh {
   font-size: 18px;
   font-family: Microsoft YaHei;
   font-weight: 400;
   color: rgba(96, 96, 96, 1);
-  margin-top: 36px;
+  margin-top: 25px;
+  line-height: 36px;
 }
 .working_looking .looking_main > .main_img > img {
   width: 632px;
@@ -163,6 +182,10 @@ export default {
   position: absolute;
   left: 16.5%;
   top: 10%;
+}
+.images {
+  width: 100%;
+  height: 100%;
 }
 .jiange {
   width: 100%;

@@ -5,7 +5,7 @@
       <img src="../assets/images/蜂蜜标题.png" alt />
     </div>
     <div class="bottom_text">
-      <p>这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案</p>
+      <p>八号地蜂蜜,源自安徽马鞍山,采用传统酿蜜工艺,保留蜂蜜原有营养和口感;色泽清透,光亮如油,还有淡淡的花香;蜜质纯而口感清甜,清香爽口,甜而不腻,丝丝细滑。八号地蜂蜜,来自大自然的馈赠。</p>
     </div>
     <!-- 右边图片 -->
     <div class="right_img">
@@ -48,20 +48,25 @@ export default {};
 }
 .left_img > img {
   margin-left: 93px;
-  margin-top: 45px;
+  margin-top: 10px;
+  width: 1053px;
+  height: 161px;
 }
 .bottom_text {
   width: 514px;
   height: 194px;
   margin-left: 401px;
-  margin-top: 50px;
+  margin-top: 20px;
+  text-align: left;
 }
 .bottom_text > p {
   font-size: 29px;
-  font-family: Source Han Sans CN;
+  font-family: "Source Han Sans CN";
   font-weight: 400;
   color: rgba(255, 255, 255, 1);
   line-height: 37px;
+  letter-spacing: 8px;
+  text-indent: 28px;
 }
 .right_img {
   width: 576px;

@@ -5,9 +5,46 @@ body::-webkit-scrollbar {
 .el-form-item__label {
   color: #ffffff;
 }
-.el-form-item__error{
-  color: #FFAD60;
+.el-form-item__error {
+  color: #ffad60;
 }
-.el-popup-parent--hidden{
+.el-popup-parent--hidden {
   padding-right: 0px !important ;
+}
+.el-dialog {
+  margin-top: 34vh !important;
+}
+.body {
+  -webkit-text-size-adjust: none;
+}
+#dropdown-menu-7000 {
+  position: absolute !important;
+  top: 5.5% !important;
+}
+#el-popover-6056 {
+  width: 150px !important;
+  height: 10% !important;
+  position: absolute !important;
+  top: 5.5% !important;
+  left: 77% !important;
+  transform: translate(-75%, -5.5%) !important;
+}
+.carousel-3d-slide {
+  border-width: 0px !important;
+}
+.el-dialog__header > span {
+  font-size: 24px;
+  font-family: "Microsoft YaHei";
+  font-weight: 400;
+  color: rgba(35, 35, 35, 1);
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+}
+.el-dialog__headerbtn {
+  display: none;
+}
+.el-dialog__footer{
+  text-align: center !important;
 }

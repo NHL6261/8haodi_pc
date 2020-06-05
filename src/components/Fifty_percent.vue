@@ -49,15 +49,15 @@ export default {};
   font-weight: 500;
   color: rgba(96, 96, 96, 1);
   position: absolute;
-  right: 27%;
-  bottom: 13%;
+  right: 28%;
+  bottom: -6%;
 }
 .left_bootom {
   width: 100px;
   height: 10px;
   background-color: #bfbfbf;
   position: absolute;
-  bottom: 7%;
+  bottom: -9%;
   left: 10%;
 }
 .fifty_left > p {
@@ -68,7 +68,7 @@ export default {};
   font-weight: 400;
   color: rgba(96, 96, 96, 1);
   position: absolute;
-  right: 145px;
+  left: -4%;
   top: 0;
   text-align: right;
 }
@@ -76,7 +76,7 @@ export default {};
   width: 400px;
   height: 249px;
   position: absolute;
-  right: 24%;
+  right: 30%;
   bottom: 6%;
 }
 .sphere {

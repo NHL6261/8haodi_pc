@@ -9,9 +9,8 @@
       </div>
       <div class="right_content">
         <div class="right_content_header">
-          <p>综合零售系统具有强大的后台管理功能，连通线上线下，提升管理效率，达到商品，库存，会员，财务等全面数字化管理，更方便公司的统一精细化管理</p>
+          <p>综合零售系统具有强大的后台管理功能,连通线上线下,提升管理效率,达到商品,库存,会员,财务等全面数字化管理， 更方便公司的统一精细化管理</p>
         </div>
-        <div class="jiange0"></div>
         <div class="right_content_main">
           <div class="icon_title">
             <img src="../assets/images/商品管理.png" alt />
@@ -26,11 +25,11 @@
             <span>采购管理</span>
           </div>
           <div class="icon_title">
-            <img src="../assets/images/销售管理.png" alt />
+            <img style="margin-top: 6px" src="../assets/images/销售管理.png" alt />
             <span>销售管理</span>
           </div>
           <div class="icon_title">
-            <img src="../assets/images/促销管理.png" alt />
+            <img style="margin-top: 8px" src="../assets/images/促销管理.png" alt />
             <span>促销管理</span>
           </div>
         </div>
@@ -45,8 +44,8 @@
             <span>会员管理</span>
           </div>
           <div class="icon_title">
-            <img src="../assets/images/采购管理.png" alt />
-            <span>商品管理</span>
+            <img src="../assets/images/icon.png" alt />
+            <span>报表管理</span>
           </div>
           <div class="icon_title">
             <img src="../assets/images/系统管理.png" alt />
@@ -108,31 +107,42 @@ export default {};
   flex-direction: column;
 }
 .comprehenive_bottom > .right_content > .right_content_header {
-  width: 541px;
+  width: 500px;
   height: 66px;
 }
-.comprehenive_bottom > .right_content.right_content_header > p {
+.comprehenive_bottom > .right_content >.right_content_header > p {
   font-size: 18px;
-  font-family: Microsoft YaHei;
+  font-family: "Microsoft YaHei";
   font-weight: 400;
-  color: rgba(96, 96, 96, 1);
+  color: #6d6c6b;
   line-height: 24px;
+  text-align: left;
 }
 .comprehenive_bottom > .right_content > .right_content_main {
-  width: 541px;
+  width: 500px;
   height: 180px;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-top: 50px;
+  line-height: 180px;
 }
 .comprehenive_bottom > .right_content > .right_content_main .icon_title {
-  width: 56px;
-  height: 78px;
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
   align-items: center;
-  line-height: 35px;
+}
+// .comprehenive_bottom > .right_content > .right_content_main .icon_title img {
+// }
+.comprehenive_bottom > .right_content > .right_content_main .icon_title span {
+  display: block;
+  font-size: 14px;
+  font-family: "Microsoft YaHei";
+  font-weight: 400;
+  color: rgba(35, 35, 35, 1);
+  line-height: 39px;
 }
 .jiange0 {
   width: 541px;

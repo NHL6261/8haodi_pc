@@ -8,7 +8,7 @@
       <div class="sphere"></div>
     </div>
     <div class="forty_right">
-      <p>八号地乳品有限公司成立，落户云山农场。 黑龙江农垦总局发改委主任于省元、牡丹江管理局副局长周茂芳、虎林市副市长刘明洋、云山农场场长孙文宏及在家场领导、垦荒人董事长兼创始人张洪江、及社会各界人士共百余人出席了奠基仪式。</p>
+      <p>八号地乳品有限公司成立,落户云山农场。黑龙江农垦总局发改委主任于省元、牡丹江管理局副局长周茂芳、虎林市副市长刘明洋、云山农场场长孙文宏及在家场领导、垦荒人董事长兼创始人张洪江、及社会各界人士共百余人出席了奠基仪式。</p>
       <img src="../assets/images/图层2.png" alt="此图片暂时无法显示" />
     </div>
   </div>
@@ -45,22 +45,22 @@ export default {};
 }
 
 .forty_right > p {
-  width: 399px;
+  width: 450px;
   height: 205px;
   font-size: 25px;
-  font-family: Source Han Sans CN;
+  font-family: "Source Han Sans CN";
   font-weight: 400;
   color: rgba(96, 96, 96, 1);
   position: absolute;
-  left: 182px;
-  top: -90px;
+  left: 32%;
+  top: -4%;
 }
 .forty_right > img {
   width: 400px;
   height: 260px;
   position: absolute;
-  left: 34%;
-  bottom: 16%;
+  left: 32%;
+  bottom:14%;
 }
 .left_bootom {
   width: 100px;

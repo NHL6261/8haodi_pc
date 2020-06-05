@@ -5,15 +5,18 @@
         <img src="../assets/images/合肥办公室.png" alt />
       </div>
       <div class="postion_content">
-        <p>北京八号地信息技术有限公司</p>
-        <p>小标题小标题小标题小标题</p>
-        <p>北京八号地信息技术有限公司是拥有一支实力雄厚且经验丰富的团队，核心成员拥有数十年的行业经验，团队经过多年的锤炼在核心队伍的带领下，凭借一流的企业管理方法和高效的技术团队支持，以“原产地、优品、甄选”为核心，致力于为广大消费者严格甄选好的产品。</p>
-        <p>
-          公司地址：北京市丰台区金茂广场3号楼1001室
-          公司电话：010-64222400
-          公司邮箱：8haodi@8haodi.com
-          公共交通：地铁9号线丰台科技园站C口
-        </p>
+        <p>合肥八号地信息技术有限公司</p>
+        <p>网购惠天下,服务千万家</p>
+        <p>合肥八号地信息技术有限公司依托全球原产地、优品、甄选资源及八号地品牌优势,打造八号地食品网络购物平台。并在线上设有八号地的天猫淘宝京东商城,致力于为顾客提供更放心的购物体验。</p>
+        <div class="address">
+          <p>公司地址：安徽省合肥市包河区滨湖金融港B3座501室</p>
+          <p>公司电话：400-818-5900</p>
+          <p>公司邮箱：8haodi@8haodi.com</p>
+          <p>
+            公共交通：公交60路、62路的滨湖会展中心西站
+            地铁1号线滨湖会展中心站
+          </p>
+        </div>
         <div class="postion_color"></div>
       </div>
       <div class="left_img">
@@ -58,7 +61,7 @@ export default {};
   transition: all 0.5s;
   transform-origin: bottom right;
   position: absolute;
-  right: 24.5%;
+  right: 24.4%;
 }
 .left_img > img:hover {
   transform: scale(1.5);
@@ -80,27 +83,27 @@ export default {};
   height: 513px;
   background: rgba(255, 255, 255, 1);
   position: absolute;
-  left: 26%;
+  left: 26.7%;
   top: 38%;
   display: block;
-  padding: 39px 46px 53px 47px;
+  padding: 39px 30px 53px 47px;
   box-sizing: border-box;
 }
 .postion_content > p:nth-child(1) {
   font-size: 33px;
-  font-family: Source Han Sans CN;
-  font-weight: 500;
+  font-family: "Source Han Sans CN";
+  font-weight: bold;
   color: rgba(35, 35, 35, 1);
 }
 .postion_content > p:nth-child(2) {
   font-size: 21px;
-  font-family: Source Han Sans CN;
+  font-family: "Source Han Sans CN";
   font-weight: 400;
   color: rgba(35, 35, 35, 1);
 }
 .postion_content > p:nth-child(3) {
   font-size: 21px;
-  font-family: Source Han Sans CN;
+  font-family: "Source Han Sans CN";
   font-weight: 400;
   color: rgba(96, 96, 96, 1);
   line-height: 25px;
@@ -108,10 +111,10 @@ export default {};
 }
 .postion_content > p:nth-child(4) {
   font-size: 21px;
-  font-family: Source Han Sans CN;
+  font-family: " Source Han Sans CN";
   font-weight: 400;
   color: rgba(96, 96, 96, 1);
-  line-height: 25px;
+  line-height: 33px;
   margin-top: 27px;
 }
 .postion_color {
@@ -121,5 +124,16 @@ export default {};
   position: absolute;
   left: 46px;
   bottom: 0;
+}
+.address {
+  width: 100%;
+  margin-top: 20px;
+}
+.address > p {
+  font-size: 21px;
+  font-family: "Source Han Sans CN";
+  font-weight: 400;
+  color: rgba(96, 96, 96, 1);
+  line-height: 33px;
 }
 </style>

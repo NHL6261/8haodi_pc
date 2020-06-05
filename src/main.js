@@ -2,13 +2,19 @@ import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
 import store from './store';
+import VueAwesomeSwiper  from 'vue-awesome-swiper'
 import './plugins/element.js';
 import './plugins/iview.js';
-// 适配 
+import 'swiper/css/swiper.css'
+// 适配
 import 'lib-flexible'
+// import './utils/adaptation'
+import './assets/lib-flexible/flexible'
+import * as API from './api/index'
+// import pug from  'pug-plain-loader'
+Vue.prototype.$HTTP = API
 import './assets/css/global.css'
 Vue.config.productionTip = false;
-
 new Vue({
   router,
   store,

@@ -12,50 +12,50 @@
     <div class="Advantage_list">
       <div class="offline">
         <div class="left_img">
-            <img src="../assets/images/warehouse12.png" alt="">
+          <img src="../assets/images/warehouse12.png" alt />
         </div>
         <div class="right_text">
-            <p>线上线下300家门店库房</p>
+          <p>线上线下300家门店库房</p>
         </div>
       </div>
       <div class="offline">
         <div class="left_img">
-            <img src="../assets/images/electric bicycle.png" alt="">
+          <img src="../assets/images/electric bicycle.png" alt />
         </div>
         <div class="right_text">
-            <p>门店会员专享专员配送</p>
+          <p>门店会员专享专员配送</p>
         </div>
       </div>
       <div class="offline">
         <div class="left_img">
-            <img src="../assets/images/customer_service.png" alt="">
+          <img src="../assets/images/customer_service.png" alt />
         </div>
         <div class="right_text">
-            <p>专享心选客服服务热线</p>
+          <p>专享心选客服服务热线</p>
         </div>
       </div>
       <div class="offline">
         <div class="left_img">
-            <img src="../assets/images/invited.png" alt="">
+          <img src="../assets/images/invited.png" alt />
         </div>
         <div class="right_text">
-            <p>推荐好友加入app兑现金</p>
+          <p>推荐好友加入app兑现金</p>
         </div>
       </div>
       <div class="offline">
         <div class="left_img">
-            <img src="../assets/images/icon_clock.png" alt="">
+          <img src="../assets/images/icon_clock.png" alt />
         </div>
         <div class="right_text">
-            <p>每日尽享限时特购产品</p>
+          <p>每日尽享限时特购产品</p>
         </div>
       </div>
       <div class="offline">
         <div class="left_img">
-            <img src="../assets/images/coupon1.png" alt="">
+          <img src="../assets/images/coupon1.png" alt />
         </div>
         <div class="right_text">
-            <p>登录送满减优惠券</p>
+          <p>登录送满减优惠券</p>
         </div>
       </div>
     </div>
@@ -71,6 +71,7 @@ export default {};
   width: 100%;
   height: 770px;
   background-image: url("../assets/images/back_34.png");
+  background-size: 100% 770px;
   background-repeat: no-repeat;
 }
 .Advantage_header {
@@ -100,9 +101,9 @@ export default {};
 }
 .Advantage_list {
   width: 100%;
-  height: 367px;
+  height: 410px;
   margin-top: 64px;
-  padding: 0 375px 0 365px;
+  padding: 0 350px 0 346px;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
@@ -124,27 +125,26 @@ export default {};
   box-sizing: border-box;
   position: relative;
 }
-.Advantage_list > .offline > .left_img >img{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-
+.Advantage_list > .offline > .left_img > img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 .Advantage_list > .offline > .right_text {
   width: 250px;
   height: 160px;
   padding: 53px 48px 51px 37px;
   box-sizing: border-box;
-  background-color: #FFF;
+  background-color: #fff;
 }
-.Advantage_list > .offline > .right_text >p{
-    font-size: 25px;
-    font-family: "SourceHanSansCN-Normal";
-    font-weight: 400;
-    color:rgba(68,68,68,1);
-    line-height:39px;
+.Advantage_list > .offline > .right_text > p {
+  width: 173px;
+  height: 56px;
+  font-size: 25px;
+  font-family: "SourceHanSansCN-Normal";
+  font-weight: 400;
+  color:rgba(68,68,68,1);
+  line-height: 33px;
 }
-
-
 </style>

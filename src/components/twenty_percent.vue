@@ -46,7 +46,7 @@ export default {};
   width: 450px;
   height: 58px;
   font-size: 25px;
-  font-family: Source Han Sans CN;
+  font-family: "Source Han Sans CN";
   font-weight: 400;
   color: rgba(96, 96, 96, 1);
   position: absolute;
@@ -62,8 +62,10 @@ export default {};
   right: 10%;
 }
 .twenty_left > p {
+  width: 212px;
+  height: 33px;
   font-size: 42px;
-  font-family: Source Han Sans CN;
+  font-family: "Source Han Sans CN";
   font-weight: 500;
   color: rgba(96, 96, 96, 1);
   position: absolute;

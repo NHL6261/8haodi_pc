@@ -30,6 +30,7 @@ export default {};
 .eighty_left {
   width: 50%;
   height: 390px;
+  text-align: left;
   position: relative;
 }
 .center_content {
@@ -50,14 +51,14 @@ export default {};
   color: rgba(96, 96, 96, 1);
   position: absolute;
   right: 27%;
-  bottom: 13%;
+  bottom: -4%;
 }
 .left_bootom {
   width: 100px;
   height: 10px;
   background-color: #bfbfbf;
   position: absolute;
-  bottom: 7%;
+  bottom: -9%;
   left: 10%;
 }
 .eighty_left > p {
@@ -68,7 +69,7 @@ export default {};
   font-weight: 400;
   color: rgba(96, 96, 96, 1);
   position: absolute;
-  right: 145px;
+  left: -4%;
   top: 0;
   text-align: right;
 }
@@ -76,7 +77,7 @@ export default {};
   width: 400px;
   height: 249px;
   position: absolute;
-  right: 24%;
+  right: 32%;
   bottom: 6%;
 }
 .sphere {

@@ -45,9 +45,18 @@ const routes = [
   {
     path: "/join",
     component: Join,
+    children:[
+      {
+        path:'/join/b2bpages',
+        component:B2Bpages,
+        meta: {
+          isShowList: true
+        }
+      }
+    ],
     meta: {
       isShowList: true
-    },
+    }
   },
   {
     path: "/about",
@@ -69,7 +78,6 @@ const routes = [
     redirect: "/home"
   }
 ];
-
 const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,

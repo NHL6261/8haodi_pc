@@ -12,39 +12,58 @@
           label-width="100px"
           class="demo-ruleForm"
         >
-          <el-form-item label="姓名:" prop="name">
-            <el-input v-model="JoinForm.name" placeholder="请输入您的姓名"></el-input>
+          <el-form-item label="姓名:" prop="fName">
+            <el-input v-model="JoinForm.fName" placeholder="请输入您的姓名"></el-input>
           </el-form-item>
-          <el-form-item label="联系电话:" prop="phone">
-            <el-input v-model="JoinForm.phone" placeholder="请输入您的联系电话"></el-input>
+          <el-form-item label="联系电话:" prop="fPhone">
+            <el-input v-model="JoinForm.fPhone" placeholder="请输入您的联系电话"></el-input>
           </el-form-item>
           <el-form-item label="申请选项:" prop="city" :style="'width:100%'">
-            <el-select v-model="JoinForm.city" placeholder="请选择城市">
-              <el-option label="食品入住" value="beijing"></el-option>
-              <el-option label="云服务收银系统代理" value="hefei"></el-option>
+            <el-select v-model="JoinForm.fPost" placeholder="云服务收银系统及App商城代理">
+              <el-option label="App商城代理" value="App商城代理"></el-option>
+              <el-option label="云服务收银系统代理" value="云服务收银系统代理"></el-option>
             </el-select>
           </el-form-item>
-          <el-form-item label="城市:" prop="post">
-            <el-select v-model="JoinForm.post" placeholder="请选择岗位">
-              <el-option label="北京" value="java"></el-option>
-              <el-option label="合肥" value="web"></el-option>
-              <el-option label="山东" value="ui"></el-option>
-            </el-select>
+          <el-form-item label="城市选择:" prop="post">
+            <el-input v-model="JoinForm.fCity" placeholder="请输入您的城市"></el-input>
           </el-form-item>
           <el-form-item label="留言:" prop="personal_profile">
-            <el-input type="textarea" v-model="JoinForm.personal_profile"></el-input>
+            <el-input type="textarea" v-model="JoinForm.text"></el-input>
           </el-form-item>
           <el-form-item class="btns">
-            <el-button type="warning" size="medium">立即申请</el-button>
+            <!-- Grow together -->
+            <!-- Testing_data = true -->
+            <el-button type="warning" size="medium" @click="growtogether">立即申请</el-button>
             <p class="contact">您的信息将被严格保密，信息提交后，客服会近期与您联系，请留意接听电话</p>
           </el-form-item>
         </el-form>
+      </div>
+      <!-- 弹出确定框 -->
+      <div class="pop_box">
+        <el-dialog
+          class="title_setting"
+          title="提交成功!"
+          :visible.sync="Testing_data"
+          width="13%"
+          modal:false
+        >
+          <!-- 底部区域 -->
+          <span slot="footer" class="dialog-footer">
+            <el-button
+              type="warning"
+              size="medium"
+              style="width: 50%"
+              @click="Testing_data = false"
+            >确 定</el-button>
+          </span>
+        </el-dialog>
       </div>
     </div>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
+import { Message } from "element-ui";
 export default {
   data() {
     //   自定义验证规则
@@ -53,7 +72,7 @@ export default {
       if (regNmae.test(value)) {
         return callback();
       } else {
-        callback(new Error("请输入汉字"));
+        callback(new Error("姓名由中文组成!"));
       }
     };
     var checkMobil = (rule, value, callback) => {
@@ -62,34 +81,66 @@ export default {
       if (regMobile.test(value)) {
         return callback();
       } else {
-        callback(new Error("请输入合法手机号"));
+        callback(new Error("请输入合法手机号!"));
       }
     };
     return {
       JoinForm: {
-        name: "", // 姓名
-        post: "", // 岗位选择
-        phone: "", //电话
-        personal_profile:
-          "本人三年工作经验本人三年工作经验本人三年工作经验本人三年工作经验本人三年工作经验本人三年工作经验本人三年工作经验本人三年工作经验本人三年工作经验本人三年工作经验本人三年工作经验本人三年工作经验本人三年工作经验本人三年工作经验本人三年工作经验本人三年工作经验本人三年工作经验本人三年工作经验本人三年工作经验本人三年工作经验本人三年工作经验本人三年工作经验本人三年工作经验" //个人简介
+        fName: "", // 姓名
+        fPost: "", // 岗位选择
+        fPhone: "", //电话
+        fCity: "", //城市选择
+        text: "", //个人简介
+        fType: 1
       },
+      Testing_data: false,
       // 获取登录信息
       UserInfo: [], // 用户登录正确
       SavaToken: "", // 保存token
       // 表单的验证规则
       Join_Rules: {
         // 姓名验证
-        name: [
+        fName: [
           { required: true, message: "请输入您的姓名", trigger: "blur" },
           { validator: Name, trigger: "blur" }
         ],
         // 用户密码验证
-        phone: [
+        fPhone: [
           { required: true, message: "请输入您的手机号", trigger: "blur" },
           { validator: checkMobil, trigger: "blur" }
         ]
       }
     };
+  },
+  methods: {
+    growtogether() {
+      let { fName, fPhone, fCity, fPost, text, fType } = this.JoinForm;
+      // 前端验证
+      this.$refs.JoinForm.validate(async valid => {
+        if (!valid) {
+          Message.error("请输入您的姓名或联系方式!");
+        } else {
+          let result = await this.$HTTP.getGrowInfo({
+            fName,
+            fPhone,
+            fCity,
+            fPost,
+            text,
+            fType
+          });
+          if (result.status === 200) {
+            this.Testing_data = true;
+            this.JoinForm.fName = '',
+            this.JoinForm.fPost = '',
+            this.JoinForm.fPhone = '',
+            this.JoinForm.fCity = '',
+            this.JoinForm.text = ''
+          } else {
+            Message.error("网络开小差了~");
+          }
+        }
+      });
+    }
   }
 };
 </script>

@@ -37,12 +37,11 @@ export default {};
 .process_main{
     width: 100%;
     height: 426px;
-    padding: 100px 180px 169px 180px;
-    box-sizing: border-box;
     line-height: 426px;
+    text-align: center;
 }
 .process_main >img{
-    width: 100%;
-    height: 100%;
+    width: 1280px;
+    height: 139;
 }
 </style>

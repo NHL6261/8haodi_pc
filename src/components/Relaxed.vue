@@ -11,7 +11,7 @@
         <div class="right_text">
           <div class="text_header">
             <img src="../assets/images/对号.png" alt />
-            <p>界面简单，操作便捷</p>
+            <p>界面简单,操作便捷</p>
           </div>
           <div class="text_bottom">
             <p>十分钟培训，店员轻松上手</p>
@@ -20,19 +20,19 @@
         <div class="right_text">
           <div class="text_header">
             <img src="../assets/images/对号.png" alt />
-            <p>界面简单，操作便捷</p>
+            <p>支持全场景支付</p>
           </div>
           <div class="text_bottom">
-            <p>十分钟培训，店员轻松上手</p>
+            <p>对接微信、 支付宝，银行卡支付，快速入账</p>
           </div>
         </div>
         <div class="right_text">
           <div class="text_header">
             <img src="../assets/images/对号.png" alt />
-            <p>界面简单，操作便捷</p>
+            <p>智能功能，高效工作</p>
           </div>
           <div class="text_bottom">
-            <p>十分钟培训，店员轻松上手</p>
+            <p>折扣，会员优惠，交班，快速设置，自动运算</p>
           </div>
         </div>
       </div>
@@ -68,12 +68,16 @@ export default {};
 .relaxed_main {
   width: 100%;
   height: 722px;
-  padding: 101px 401px 114px 320px;
+  padding: 80px 401px 114px 320px;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
 }
 .relaxed_main .left_img {
+  width: 631px;
+  height: 507px;
+}
+.relaxed_main .left_img >img{
   width: 631px;
   height: 507px;
 }
@@ -85,7 +89,6 @@ export default {};
 }
 .right_img .right_text > .text_header {
   display: flex;
-  justify-content: space-between;
   line-height: 29px;
 }
 .right_img .right_text > .text_header > img {
@@ -97,10 +100,10 @@ export default {};
   font-family: Microsoft YaHei;
   font-weight: bold;
   color: rgba(35, 35, 35, 1);
-  margin-left: 2px;
+  margin-left: 7px;
 }
 .right_img .right_text > .text_bottom > p {
-  margin-left: 30px;
+  margin-left: 35px;
   margin-top: 23px;
   font-size: 18px;
   font-family: Microsoft YaHei;

@@ -40,5 +40,11 @@ export default {};
     text-align: center;
     margin-top: 87px;
     margin-bottom: 103px;
+    padding: 0 435px 0 440px;
+    box-sizing: border-box;
+}
+.perfect_img >img{
+  width: 100%;
+  height: 100%;
 }
 </style>

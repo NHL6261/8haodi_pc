@@ -9,50 +9,56 @@
         <p>自营商品</p>
       </div>
       <div class="self_assured">
-        <p>我们只提供安全放心的购物</p>
+        <p>一站式购物 零距离服务</p>
       </div>
       <!-- 四个按钮 -->
       <div class="four_btn">
-        <button>
+        <button @click="tbShop">
           <!-- 左边icon -->
           <div class="left_icon">
-            <img src="../assets/images/taobao.png" alt />
+            <img class="tbsize" src="../assets/product_images/taobao.png" alt />
           </div>
           <!-- 右边title -->
           <div class="right_title">
-            <a href="##">淘宝店铺</a>
+            <p>淘宝店铺</p>
           </div>
         </button>
-        <button>
+        <button @click="jdFlagship">
           <!-- 左边icon -->
           <div class="left_icon">
-            <img src="../assets/images/jingdong.png" alt />
+            <img class="jdsize" src="../assets/product_images/jingdong.png" alt />
           </div>
           <!-- 右边title -->
           <div class="right_title">
-            <a href="##">京东旗舰</a>
+            <p>京东旗舰</p>
           </div>
         </button>
-        <button>
+        <button @click="tmMall">
           <!-- 左边icon -->
           <div class="left_icon">
-            <img src="../assets/images/tianmaoxingxiang2.png" alt />
+            <img class="tmsize" src="../assets/product_images/tianmaoxingxiang2.png" alt />
           </div>
           <!-- 右边title -->
           <div class="right_title">
-            <a href="##">天猫商城</a>
+            <p>天猫商城</p>
           </div>
         </button>
-        <button>
+        <button @click="jdMonopoly">
           <!-- 左边icon -->
           <div class="left_icon">
-            <img src="../assets/images/jingdong_.png" alt />
+            <img class="zmsize" src="../assets/product_images/jingdong_.png" alt />
           </div>
           <!-- 右边title -->
           <div class="right_title">
-            <a href="##">京东专卖</a>
+            <p>京东专卖</p>
           </div>
         </button>
+      </div>
+      <div class="three_text">
+        <p>*八号地电商代理运营</p>
+      </div>
+      <div class="four_text">
+        <p>*八号地电商代理运营</p>
       </div>
     </div>
     <!-- 中间内容区域 -->
@@ -68,18 +74,15 @@
           <span>八号地豆浆粉</span>
           <div class="eighty-four"></div>
           <div class="title_detail">
-            <p>
-              选用东北特色大豆，产自黑龙江省绥化市，黑土地肥沃，长出的大豆品质优良。
-              利用现代化先进设备和技术， 保留了大豆营养成分，提供植物蛋白。
-              采用先进的16道精致工艺，高温灭菌、提香、脱皮、去芽、脱渣、灭菌、豆香醇厚、口感顺滑、安全放心。
-            </p>
+            <p>健康美味源自品质好材,选用东北特色大豆,利用现代化设备和技术,经过16道精致工艺,用心缔造一杯香浓豆浆。</p>
+            <p>入口香甜细润,浓郁醇厚不甜腻，滴滴醇香,让人回味无穷,美味随时享用,方便携带,开启健康每一天。</p>
           </div>
           <!--下边四个按钮 -->
           <div class="btn_container">
-            <div>非转基因</div>
-            <div>速溶好口感</div>
-            <div>绿色健康</div>
-            <div>独立小包装</div>
+            <p>甄选好料</p>
+            <p>匠心匠造</p>
+            <p>口感细腻</p>
+            <p>健康美味</p>
           </div>
         </div>
         <!-- 中间区域底部定位 -->
@@ -113,15 +116,19 @@
           </div>
           <!-- 右边文本 -->
           <div class="bottom_content_text">
-            <p>这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案</p>
+            <p>好吃的蜜饯果干,来自八号地的甜蜜礼物,365天享受美味酸甜,只为口感的醇正与统一;果干秉承了自身的原色原香,一口下去,清爽不腻人。颗颗果肉肥嫩,营养健康,口口超满足！</p>
           </div>
         </div>
       </div>
     </div>
     <!-- 蜂蜜区域 -->
-    <Honey></Honey>
+    <keep-alive>
+      <Honey></Honey>
+    </keep-alive>
     <!-- 山楂区域 -->
-    <Hawthorn></Hawthorn>
+    <keep-alive>
+      <Hawthorn></Hawthorn>
+    </keep-alive>
     <!-- 蓝莓区域 -->
     <Blueberry></Blueberry>
     <!-- 间隔 -->
@@ -132,16 +139,30 @@
 </template>
 
 <script type="text/ecmascript-6">
-import Hawthorn from './Hawthorn_series'
-import Honey from "./Honey_series"
-import Footer from "./Footer"
-import Blueberry from'./Blueberry_series'
+import Hawthorn from "./Hawthorn_series";
+import Honey from "./Honey_series";
+import Footer from "./Footer";
+import Blueberry from "./Blueberry_series";
 export default {
   components: {
     Footer,
     Honey,
     Hawthorn,
     Blueberry
+  },
+  methods: {
+    jdFlagship() {
+      window.open("https://mall.jd.com/index-677614.html?from=pc");
+    },
+    tbShop() {
+      window.open("https://shop149269048.taobao.com");
+    },
+    tmMall() {
+      window.open("https://kenhuangrenbahaodi.tmall.com");
+    },
+    jdMonopoly() {
+      window.open("https://mall.jd.com/index-10058303.html?from=p");
+    }
   }
 };
 </script>
@@ -156,6 +177,7 @@ export default {
   background-image: url("../assets/images/自营产品-PCbanner.png");
   background-repeat: no-repeat;
   background-size: 100% 650px;
+  position: relative;
 }
 .self_img {
   width: 108px;
@@ -179,6 +201,7 @@ export default {
   font-weight: bold;
   color: rgba(255, 255, 255, 1);
   line-height: 88px;
+  letter-spacing: 8px;
 }
 .self_assured {
   width: 100%;
@@ -192,6 +215,7 @@ export default {
   font-weight: 400;
   color: rgba(255, 255, 255, 1);
   line-height: 60px;
+  letter-spacing: 8px;
 }
 .four_btn {
   width: 100%;
@@ -201,6 +225,7 @@ export default {
   display: flex;
   justify-content: space-between;
   margin-top: 73px;
+  position: relative;
 }
 .four_btn > button {
   width: 240px;
@@ -213,6 +238,10 @@ export default {
   background-color: #ffeead;
   display: flex;
   justify-content: space-between;
+  position: relative;
+}
+.four_btn > button:hover {
+  cursor: pointer;
 }
 .four_btn > button > .left_icon {
   width: 70px;
@@ -220,7 +249,7 @@ export default {
   position: relative;
 }
 .four_btn > button > .left_icon > img {
-  width: 70px;
+  width: 80px;
   height: 60px;
   color: #000000;
   position: absolute;
@@ -233,10 +262,10 @@ export default {
   height: 80px;
   text-align: center;
 }
-.four_btn > button > .right_title > a {
+.four_btn > button > .right_title > p {
   line-height: 78px;
   font-size: 33px;
-  font-family: Source Han Sans CN;
+  font-family: "Source Han Sans CN";
   font-weight: 400;
   color: rgba(96, 96, 96, 1);
 }
@@ -270,11 +299,12 @@ export default {
 .pulp_powder > .pulp_bottom > .pulp_bottom_content {
   width: 100%;
   height: 194px;
-  margin-top: 69px;
+  margin-top: 50px;
   padding: 0 401px 0 350px;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 .pulp_bottom > .pulp_bottom_content .bottom_content_img {
   width: 555px;
@@ -285,12 +315,17 @@ export default {
 .pulp_bottom > .pulp_bottom_content > .bottom_content_text {
   width: 514px;
   height: 194px;
+  position: absolute;
+  right: 20%;
+  top:-16%;
 }
-.pulp_bottom > .pulp_bottom_content > .bottom_content_text {
+.pulp_bottom > .pulp_bottom_content > .bottom_content_text > p {
   font-size: 29px;
-  font-family: Source Han Sans CN;
+  font-family: "Source Han Sans CN";
   font-weight: 400;
   color: rgba(96, 96, 96, 1);
+  text-indent: 30px;
+  letter-spacing: 2px;
 }
 .pulp_bottom > .pulp_bottom_header .bottom_left_img {
   width: 300px;
@@ -301,6 +336,10 @@ export default {
   height: 180px;
   display: flex;
   justify-content: space-between;
+}
+.pulp_bottom > .pulp_bottom_header .bottom_right_img .right_img_right > img {
+  width: 941px;
+  height: 156px;
 }
 .pulp_bottom > .pulp_bottom_header .bottom_left_img > img {
   width: 300px;
@@ -322,19 +361,26 @@ export default {
   height: 50px;
   line-height: 50px;
   font-size: 50px;
-  font-family: Source Han Sans CN;
+  font-family: "Source Han Sans CN";
   font-weight: 800;
   color: rgba(35, 35, 35, 1);
 }
-.pulp_powder > .pulp_header .pupl_right_title > .title_detail {
-  width: 519px;
-  height: 364px;
-}
-.pulp_powder > .pulp_header .pupl_right_title > .title_detail > p {
-  font-size: 33px;
-  font-family: Source Han Sans CN;
-  font-weight: 400;
+// .pulp_powder > .pulp_header .pupl_right_title > .title_detail {
+//   text-align: left;
+// }
+.pulp_powder > .pulp_header .pupl_right_title > .title_detail > p:nth-child(1) {
+  font-size: 28px;
+  font-family: "Source Han Sans CN";
   color: rgba(125, 125, 125, 1);
+  letter-spacing: 10px;
+  text-align: center;
+}
+.pulp_powder > .pulp_header .pupl_right_title > .title_detail > p:nth-child(2) {
+  font-size: 28px;
+  font-family: "Source Han Sans CN";
+  color: rgba(125, 125, 125, 1);
+  letter-spacing: 10px;
+  text-align: center;
 }
 .pulp_powder > .pulp_header .pupl_right_title > .btn_container {
   width: 519px;
@@ -346,17 +392,19 @@ export default {
   justify-content: space-between;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-top: 20px;
 }
-.pulp_powder > .pulp_header .pupl_right_title > .btn_container > div {
+.pulp_powder > .pulp_header .pupl_right_title > .btn_container > p {
   width: 206px;
   height: 64px;
   border-radius: 32px;
   background-color: #ededed;
   line-height: 64px;
   font-size: 28px;
-  font-family: Source Han Sans CN;
+  font-family: "Source Han Sans CN";
   font-weight: 800;
   color: rgba(150, 206, 180, 1);
+  letter-spacing: 8px;
 }
 .pulp_powder > .pulp_header > .line_content {
   width: 128px;
@@ -367,10 +415,74 @@ export default {
   top: 10%;
   transform: translate(-69.5%, -10%);
 }
+.right_img_left > img {
+  width: 180px;
+  height: 180px;
+}
+.bottom_content_img > .left_img > img {
+  width: 180px;
+  height: 180px;
+}
+.bottom_content_img > .right_img > img {
+  width: 300px;
+  height: 180px;
+}
 .eighty-four {
   width: 519px;
   height: 64px;
   background-color: #fff;
+}
+.three_text {
+  height: 9px;
+  position: absolute;
+  left: 59%;
+  bottom: 20%;
+}
+.three_text > p {
+  transform: translate(-50%, -10%) scale(0.8);
+  font-size: 8px;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: rgba(166, 166, 166, 1);
+}
+.three_text > p:hover {
+  cursor: pointer;
+}
+.four_text {
+  height: 9px;
+  position: absolute;
+  left: 76%;
+  bottom: 20%;
+}
+.four_text > p {
+  transform: translate(-50%, -10%) scale(0.8);
+  font-size: 8px;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: rgba(166, 166, 166, 1);
+}
+.four_text > p:hover {
+  cursor: pointer;
+}
+.four_btn > button > .left_icon > .tbsize {
+  width: 49px;
+  height: 50px;
+  margin-left: 10px;
+}
+.four_btn > button > .left_icon > .jdsize {
+  width: 44px;
+  height: 38px;
+  margin-left: 10px;
+}
+.four_btn > button > .left_icon > .tmsize {
+  width: 66px;
+  height: 23px;
+  margin-left: 8px;
+}
+.four_btn > button > .left_icon > .zmsize {
+  width: 41px;
+  height: 41px;
+  margin-left: 10px;
 }
 .toubujiange {
   width: 100%;

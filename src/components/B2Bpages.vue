@@ -10,7 +10,7 @@
         <p>B2B代理</p>
       </div>
       <div class="b2b_detail">
-        <p>加入代理，助力门店智慧收银</p>
+        <p>加入代理，打造新零售智慧门店</p>
       </div>
     </div>
     <div class="Four_problems">
@@ -52,16 +52,17 @@
     <Agent_process></Agent_process>
     <!-- 底部footer -->
     <win_win></win_win>
+    <router-view></router-view>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
-import Service_Page from './Service_Page'
-import Choose from './choose_us'
-import Agent_process from './Agent_process'
-import win_win from './Win_win'
+import Service_Page from "./Service_Page";
+import Choose from "./choose_us";
+import Agent_process from "./Agent_process";
+import win_win from "./Win_win";
 export default {
-  components:{
+  components: {
     Service_Page,
     Choose,
     Agent_process,
@@ -104,19 +105,21 @@ export default {
   font-weight: bold;
   color: rgba(255, 255, 255, 1);
   line-height: 90px;
+  letter-spacing: 8px;
 }
 .b2b_detail {
   width: 100%;
   height: 65px;
-  margin-top: 27px;
+  margin-top: 30px;
   text-align: center;
 }
 .b2b_detail > p {
   font-size: 67px;
   font-family: Microsoft YaHei;
-  font-weight: 400;
+  font-weight: bold;
   color: rgba(255, 255, 255, 1);
   line-height: 60px;
+  letter-spacing: 5px;
 }
 .Four_problems {
   width: 100%;
@@ -172,9 +175,9 @@ export default {
   position: absolute;
   left: 49%;
   top: 71%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
-.Four_problems .slow_container > .slow_text .slow > p:hover{
+.Four_problems .slow_container > .slow_text .slow > p:hover {
   color: #fff;
 }
 .Four_problems .slow_container > .slow_text p {

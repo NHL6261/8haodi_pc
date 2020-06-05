@@ -4,7 +4,7 @@
       <p>服务支持</p>
     </div>
     <div class="servite_main">
-      <div class="main_container">
+      <div class="main_container" >
         <div class="left_img">
           <img src="../assets/images/售前咨询.png" alt />
         </div>
@@ -13,7 +13,7 @@
           <p>专业客服随时为您答惑,全面了解</p>
         </div>
       </div>
-       <div class="main_container">
+      <div class="main_container">
         <div class="left_img">
           <img src="../assets/images/远程维护.png" alt />
         </div>
@@ -22,16 +22,16 @@
           <p>平台稳定,技术团队远程维护系统</p>
         </div>
       </div>
-       <div class="main_container">
+      <div class="main_container">
         <div class="left_img">
           <img src="../assets/images/操作指导.png" alt />
         </div>
         <div class="right_content">
           <p>操作指导</p>
-          <p>多种指导方式，助力门店快速使用</p>
+          <p>多种指导方式,助力门店快速使用</p>
         </div>
       </div>
-       <div class="main_container">
+      <div class="main_container">
         <div class="left_img">
           <img src="../assets/images/后期保障.png" alt />
         </div>
@@ -45,7 +45,21 @@
 </template>
 
 <script type="text/ecmascript-6">
-export default {};
+export default {
+  data(){
+    return{
+
+    }
+  },
+  methods:{
+    test1(){
+      console.log(1111)
+    },
+    test2(){
+      console.log(2222)
+    }
+  }
+};
 </script>
 
 <style lang="less" scoped>
@@ -80,7 +94,6 @@ export default {};
   justify-content: space-between;
   flex-direction: row;
   flex-wrap: wrap;
-
 }
 .main_container {
   width: 622px;
@@ -91,6 +104,11 @@ export default {};
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0px 0px 20px 0px rgba(255, 173, 96, 0.2);
+  border: 4px solid #FFF;
+}
+.main_container:hover{
+  border: 4px solid #FFAD60;
 }
 .main_container > .left_img {
   width: 92px;

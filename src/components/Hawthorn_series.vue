@@ -22,7 +22,7 @@
       </div>
       <!-- 文本区域 -->
       <div class="bottom_text">
-        <p>这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案这里是文案</p>
+        <p>好味道源自好原料,用心挑选个大饱满山楂,果肉细腻无渣;山楂系列产品经十几道制作工艺制作而成,只为保留纯正口感;酸甜可口,儿时的味道油然而生;唇齿留香,代代传承的味蕾记忆。</p>
       </div>
     </div>
   </div>
@@ -54,12 +54,25 @@ export default {};
   justify-content: space-between;
   flex-direction: column;
 }
-.left_content > .right_img {
+.left_content > .left_img .shanzha_one >img{
+  width: 180px;
+  height: 180px;
+}
+
+.left_content > .left_img .shanzha_two >img{
+  width: 180px;
+  height: 180px;
+}
+.left_content >.right_img >img{
   width: 300px;
   height: 430px;
 }
 .right_content {
   width: 812px;
+}
+.right_content > .header_img >img{
+  width: 812px;
+  height: 158px;
 }
 .bottom_text > p {
   width: 514px;
@@ -69,6 +82,8 @@ export default {};
   font-weight: 400;
   color: rgba(96, 96, 96, 1);
   line-height: 42px;
-  margin: 50px 0 0 98px;
+  margin: 20px 0 0 98px;
+  text-indent: 25px;
+  letter-spacing: 5px;
 }
 </style>

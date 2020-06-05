@@ -14,19 +14,19 @@
       </div>
       <!-- 心选App detail -->
       <div class="heart_detail">
-        <span>放心购 用心选</span>
+        <span>用心选 放心购</span>
       </div>
       <!-- 下载页面 -->
       <div class="heart_download">
         <div class="heart_swipper">
           <div class="download_content">
-            <!-- <img src="../assets/images/anzhuo.png" alt=""> -->
+            <img src="../assets/images/anzhuoFillet.png" alt="此图片暂时无法显示" />
           </div>
           <span>安卓下载</span>
         </div>
         <div class="heart_swipper">
           <div class="download_content">
-            <!-- <img src="../assets/images/anzhuo.png" alt=""> -->
+            <img src="../assets/images/iosFillet.png" alt="此图片暂时无法显示" />
           </div>
           <span>iOS下载</span>
         </div>
@@ -63,18 +63,23 @@
       <div class="four_pictures_img">
         <img src="../assets/images/coupon_recieve.png" alt />
         <img src="../assets/images/info_detail.png" alt />
-        <img src="../assets/images/classify.png" alt />
-        <img src="../assets/images/mine.png" alt />
+        <img src="../assets/images/classif.png" alt />
+        <img src="../assets/images/mine_pa.png" alt />
       </div>
     </div>
     <!-- 闪电配送 -->
-    <Lighting></Lighting>
-    <!-- 我们的优势 -->
-    <Advantage></Advantage>
+    <keep-alive>
+      <Lighting></Lighting>
+    </keep-alive>
+    <keep-alive>
+      <Advantage></Advantage>
+    </keep-alive>
     <!-- 间隔 -->
     <div class="jiange2"></div>
     <!-- Footer -->
-    <Footer></Footer>
+    <keep-alive>
+      <Footer></Footer>
+    </keep-alive>
   </div>
 </template>
 
@@ -94,6 +99,8 @@ export default {
 <style lang="less" scoped>
 #heart_header {
   width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 .heart_banner {
   width: 100%;
@@ -121,6 +128,7 @@ export default {
   font-weight: bold;
   color: rgba(255, 255, 255, 1);
   box-sizing: border-box;
+  letter-spacing: 8px;
 }
 .heart_detail {
   text-align: center;
@@ -132,10 +140,12 @@ export default {
   font-family: Microsoft YaHei;
   font-weight: 400;
   color: rgba(255, 255, 255, 1);
+  letter-spacing: 8px;
 }
 .heart_download {
   width: 100%;
   height: 236px;
+  margin-top: 34px;
   padding: 0px 637px;
   box-sizing: border-box;
   display: flex;
@@ -147,11 +157,11 @@ export default {
   text-align: center;
 }
 .heart_download > .heart_swipper > span {
-  font-size: 25px;
-  font-family: Source Han Sans CN;
+  font-family: "Source Han Sans CN";
   font-weight: 400;
+  font-size: 25px;
   color: rgba(255, 255, 255, 1);
-  top: 12px;
+  margin-top: 12px;
 }
 .heart_download > .heart_swipper > .download_content {
   width: 200px;
@@ -159,9 +169,14 @@ export default {
   background-color: #fff;
   border-radius: 10px;
 }
+.heart_download > .heart_swipper > .download_content img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+}
 .heart_white {
   width: 100%;
-  height: 337px;
+  height: 559px;
   background-color: #fff;
   position: relative;
 }
@@ -171,64 +186,66 @@ export default {
   background: #e1e1e1;
   position: absolute;
   right: 0;
-  top: 85%;
+  top: 25%;
   transform: translateY(-6%);
 }
 .gray_zone > .title {
-  width: 1066px;
+  width: 1200px;
 }
 .gray_zone > .center_title {
   width: 450px;
   height: 163px;
-  margin-left: 199px;
+  margin-left: 192px;
 }
 .gray_zone > .center_title > span {
+  font-family: "Source Han Sans CN";
+  font-weight: 400;
+  line-height: 46px;
   display: block;
   font-size: 25px;
-  font-family: Source Han Sans CN;
-  font-weight: 400;
-  color: rgba(125, 125, 125, 1);
+  color: #7d7d7d;
 }
 .gray_zone > .title > p {
   font-size: 50px;
-  font-family: Source Han Sans CN;
+  font-family: " Source Han Sans CN";
   font-weight: 400;
-  color: rgba(68, 68, 68, 1);
+  color: #444444;
   margin: 82px 493px 24px 255px;
   box-sizing: border-box;
+  letter-spacing: 8px;
 }
 .three_photos > .first_img {
   width: 316px;
-  height: 680px;
+  height: 650px;
   position: absolute;
-  left: 350px;
-  top: 720px;
+  left: 18%;
+  top: 20.5%;
 }
 .three_photos > .second_img {
-  width: 316px;
-  height: 680px;
+  width: 355px;
+  height: 700px;
   position: absolute;
-  left: 580px;
-  top: 720px;
+  left: 32%;
+  top: 19.8%;
 }
 .three_photos > .second_img > img {
-  width: 316px;
-  height: 680px;
+  width: 355px;
+  height: 700px;
 }
 .three_photos > .last_img > img {
-  width: 436px;
+  width: 420px;
   height: 220px;
 }
 .three_photos > .last_img {
   width: 316px;
   height: 680px;
   position: absolute;
-  left: 520px;
-  top: 934px;
+  left: 30.1%;
+  top: 25.1%;
 }
 .three_photos > .first_img > img {
   width: 316px;
-  height: 680px;
+  height: 650px;
 }
 .four_pictures_container {
   width: 100%;

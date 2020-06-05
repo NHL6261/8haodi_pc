@@ -6,23 +6,55 @@
       </div>
       <div class="jiange"></div>
       <div class="warehouse">
-          <img src="../assets/images/warehouse.png" alt="">
-      </div>
-      <div class="">
+          <img src="../assets/images/warehouse.png" alt="此图片暂时无法显示">
       </div>
       <div class="warehouse_text">
-          <p class="warehouse_text1">岗位分配</p>
+          <p class="warehouse_text1" >岗位分配</p>
           <p class="warehouse_text2">供应链</p>
           <p class="warehouse_text3">质量审核</p>
+      </div>
+      <div class="jiange1"></div>
+      <div class="center_content">
+          <div class="cloud_service">
+                <div class="cloud_img"> 
+                    <img src="../assets/images/cloud.png" alt="此图片暂时无法显示">
+                </div>
+                <div class="cloud_text">
+                    <p>权限管理</p>
+                    <p>即时更新</p>
+                    <p>数据安全备份</p>
+                </div>
+          </div>
+          <div class="footer_content">
+            <div class="footer_left">
+                <img src="../assets/images/store1.png" alt="">
+            </div>
+            <div class="left_text">
+                <p>全种类支付</p>
+                <p>触屏收银</p>
+                <p>营销</p>
+                <p>会员管理</p>
+            </div>
+            <div class="container_content">
+                <p>无缝连接相互引流</p>
+            </div>
+            <div class="footer_right">
+                <img src="../assets/images/online market.png" alt="">
+            </div>
+          </div>
+          <div class="right_text">
+            <p>快递接单</p>
+            <p>商城</p>
+            <p>大批量购进</p>
+            <p>配送</p>
+          </div>
       </div>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
-import Operated from './Operated'
   export default {
     components: {
-        Operated
     },
   }
 </script>
@@ -47,13 +79,13 @@ import Operated from './Operated'
         width 100%
         height 185px
         margin-top 20px
-        background-color red
         text-align center
         >img 
             width 331px
             height 185px
     .warehouse_text
         position relative
+        background-color red
         .warehouse_text1,.warehouse_text2,.warehouse_text3
             font-size 25px
             font-family "SourceHanSansCN-Regular"
@@ -63,14 +95,214 @@ import Operated from './Operated'
             position absolute
             left 1130px
             top -160px
+            animation: text2 3s linear alternate infinite;
+        @keyframes text1 {
+            from{
+                opacity 0
+            }
+            to{
+                opacity 1
+            }
+        }
         .warehouse_text2
             position absolute
             left 50%
-            top 7px
+            top 20px
             transform translate(-50%)
+            animation: text1 3s linear alternate infinite;
         .warehouse_text3
             position absolute
             left 37%
             top -100px
             transform translate(-37%)
+            animation: text1 3s linear alternate infinite;
+        @keyframes text2 {
+            from{
+                opacity 1
+            }
+            to{
+                opacity 0
+            }
+        }
+    .jiange1
+        width 100%
+        height 60px
+    .center_content
+        width 100%
+        height 1110px
+        margin-top 57px
+        position relative
+        .cloud_service
+            width 100%
+            height 280px
+            text-align center
+            position relative
+            .cloud_img
+                width 521px
+                height 280px
+                margin 0 auto
+                >img 
+                    width 521px
+                    height 280p
+            .cloud_text
+                >p:nth-child(1)
+                    position absolute
+                    left 40%
+                    top -30px
+                    transform translate(-50%)
+                    width:120px;
+                    font-size:25px;
+                    font-family:Source Han Sans CN;
+                    font-weight:400;
+                    color:rgba(125,125,125,1);
+                    animation: text2 3s linear alternate infinite;
+                >p:nth-child(2)
+                    position absolute
+                    left 30%
+                    top 50%
+                    transform translate(-30%)
+                    width:120px;
+                    font-size:25px;
+                    font-family:Source Han Sans CN;
+                    font-weight:400;
+                    color:rgba(125,125,125,1);
+                    animation: text1 3s linear alternate infinite;
+                >p:nth-child(3)
+                    position absolute
+                    right 25%
+                    top 25%
+                    transform translate(-25%,25%)
+                    width:160px;
+                    font-size:25px;
+                    font-family:Source Han Sans CN;
+                    font-weight:400;
+                    color:rgba(125,125,125,1);
+                    animation: text2 3s linear alternate infinite;
+        .footer_content
+            width 100%
+            height 260px
+            padding 74px 407px 0 411px
+            box-sizing border-box
+            display flex
+            justify-content space-between
+            position relative
+            .footer_left
+                width 331px
+                height 185px
+                >img 
+                   width 331px
+                   height 185px
+            .left_text >p:nth-child(1)
+                width:125px;
+                height:25px;
+                font-size:25px;
+                font-family:Source Han Sans CN;
+                font-weight:400;
+                color:rgba(125,125,125,1);
+                position absolute
+                left 23%
+                top 35px
+                transform translate(-23%)
+                animation: text2 3s linear alternate infinite;
+            .left_text >p:nth-child(2)
+                width:125px;
+                height:25px;
+                font-size:25px;
+                font-family:Source Han Sans CN;
+                font-weight:400;
+                color:rgba(125,125,125,1);
+                position absolute
+                left 35%
+                top 35px
+                transform translate(-23%)
+                animation: text1 3s linear alternate infinite;
+            .left_text >p:nth-child(3)
+                width:125px;
+                height:25px;
+                font-size:25px;
+                font-family:Source Han Sans CN;
+                font-weight:400;
+                color:rgba(125,125,125,1);
+                position absolute
+                left  42%
+                top 57%
+                transform translate(-23%)
+                animation: text2 3s linear alternate infinite;
+            .left_text >p:nth-child(4)
+                width:125px;
+                height:25px;
+                font-size:25px;
+                font-family:Source Han Sans CN;
+                font-weight:400;
+                color:rgba(125,125,125,1);
+                position absolute
+                left  20%
+                top 98%
+                transform translate(-23%)
+                animation: text1 3s linear alternate infinite;
+            .container_content
+                >p
+                    width:220px;
+                    font-size:25px;
+                    font-family:Source Han Sans CN;
+                    font-weight:400;
+                    color:rgba(125,125,125,1);
+                    position absolute
+                    left 50%
+                    top 85%
+                    transform translate(-50%,-75%)
+                    animation: text1 3s linear alternate infinite;
+            .footer_right
+                width 331px
+                height 185px
+                >img 
+                   width 331px
+                   height 185px
+        .right_text 
+            >p:nth-child(1)
+                width:100px;
+                font-size:25px;
+                font-family:Source Han Sans CN;
+                font-weight:400;
+                color:rgba(125,125,125,1);
+                position absolute
+                right 35%
+                top 30%
+                animation: text1 3s linear alternate infinite;
+            >p:nth-child(2)
+                width:60px;
+                font-size:25px;
+                font-family:Source Han Sans CN;
+                font-weight:400;
+                color:rgba(125,125,125,1);
+                position absolute
+                right 24%
+                top 28%
+                animation text2 3s linear alternate infinite;
+            >p:nth-child(3)
+                width:150px;
+                height:25px;
+                font-size:25px;
+                font-family:Source Han Sans CN;
+                font-weight:400;
+                color:rgba(125,125,125,1);
+                position absolute
+                right 33%
+                top 49%
+                animation: text2 3s linear alternate infinite;
+            >p:nth-child(4)
+                width:150px;
+                height:25px;
+                font-size:25px;
+                font-family:Source Han Sans CN;
+                font-weight:400;
+                color:rgba(125,125,125,1);
+                position absolute
+                right 13%
+                top 47%
+                animation: text1 3s linear alternate infinite;
+    .four_pictures
+        width 100%
+        height 460px
+        background-color red
 </style>

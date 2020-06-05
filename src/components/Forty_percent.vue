@@ -59,7 +59,7 @@ export default {};
   height: 10px;
   background-color: #bfbfbf;
   position: absolute;
-  bottom: 7%;
+  bottom: -9%;
   right: 10%;
 }
 .forty_left > p {
@@ -68,8 +68,8 @@ export default {};
   font-weight: 500;
   color: rgba(96, 96, 96, 1);
   position: absolute;
-  left: 27%;
-  bottom: 13%;
+  left: 28%;
+  bottom: -6%;
 }
 .forty_right > img {
   width: 400px;

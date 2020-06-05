@@ -100,7 +100,7 @@ export default {
   font-weight: 400;
   color: rgba(0, 0, 0, 1);
   position: absolute;
-  left: 50%;
+  left: 51%;
   bottom: 13px;
   transform: translate(-50%);
 }
