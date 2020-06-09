@@ -45,7 +45,7 @@
         </div>
         <div class="footer_main">
           <div class="footer_img_content" :style="'margin-top: 0'">
-            <div class="top_img" style="padding: 81px 39px 55px 55px;">
+            <div class="top_img">
               <img src="../assets/images/收音机.png" alt />
             </div>
             <div class="bottom_text">
@@ -54,7 +54,7 @@
             </div>
           </div>
           <div class="footer_img_content" :style="'margin-top: 0'">
-            <div class="top_img" style="padding: 64px 210px 20px 191px;">
+            <div class="top_img">
               <img :style="'margin-right: 25px,'" src="../assets/images/扫码枪.png" class="size" alt />
             </div>
             <div class="bottom_text">
@@ -63,7 +63,7 @@
             </div>
           </div>
           <div class="footer_img_content">
-            <div class="top_img" style="padding: 39px 156px 56px 162px;">
+            <div class="top_img">
               <img class="change" src="../assets/images/打印机.png" alt="此图片暂时无法显示" />
             </div>
             <div class="bottom_text">
@@ -72,7 +72,7 @@
             </div>
           </div>
           <div class="footer_img_content">
-            <div class="top_img" style="padding: 90px 40px 87px 45px;">
+            <div class="top_img">
               <img class="imgsize" src="../assets/images/钱箱.png" alt />
             </div>
             <div class="bottom_text">
@@ -82,6 +82,8 @@
           </div>
         </div>
       </div>
+      <div class="jiange_whilt"></div>
+      <Footer/>
     </div>
   </div>
 </template>
@@ -91,12 +93,14 @@ import Comprehensive from "./Comprehensive";
 import Perfect from "./perfect_data";
 import Delivery from "./Delivery";
 import Relaxed from "./Relaxed";
+import Footer from './Footer'
 export default {
   components: {
     Comprehensive,
     Perfect,
     Delivery,
-    Relaxed
+    Relaxed,
+    Footer
   }
 };
 </script>
@@ -272,5 +276,10 @@ export default {
 .cash_footer .footer_main .footer_img_content .top_img > .imgsize {
   width: 537px;
   height: 314px;
+}
+.jiange_whilt{
+  width: 100%;
+  height: 38px;
+  background-color: #fff;
 }
 </style>

@@ -16,7 +16,7 @@
         </div>
         <!-- 种子的魅力 -->
         <div class="seed">
-          <span>源于1颗种子的魄力</span>
+          <span>不辜负每一份信任</span>
         </div>
         <!-- Android and Ios  -->
         <div class="btn_setting">
@@ -209,10 +209,12 @@ export default {
             width 200px
             height 180px
             position: absolute;
-            top: 60px;
+            top: 101%;
             display: none;
             z-index: 10;
             background: rgba(0,0,0,.1)
+            border-top-left-radius 10px
+            border-top-right-radius 10px
           }
         }
       }

@@ -10,8 +10,7 @@
           <p>关于我们</p>
         </div>
         <div class="about_bottom">
-          <p>精耕深耕</p>
-          <p>健康永驻</p>
+          <p>实力赢得魅力</p>
         </div>
       </div>
     </div>
@@ -21,7 +20,7 @@
       </div>
       <div class="postion_content">
         <p>北京八号地信息技术有限公司</p>
-        <p>兵强将勇,精益求精</p>
+        <p>以人为本 坚持诚信 合作创新</p>
         <p>北京八号地信息技术有限公司是拥有一支实力雄厚且经验丰富的团队，核心成员拥有数十年的行业经验，团队经过多年的锤炼在核心队伍的带领下，凭借一流的企业管理方法和高效的技术团队支持，以“原产地、优品、甄选”为核心，致力于为广大消费者严格甄选好的产品。</p>
         <div class="address">
           <p>公司地址：北京市丰台区金茂广场3号楼1001室</p>
@@ -78,6 +77,7 @@ export default {
   width: 100%;
   padding: 80px 469px 50px 482px;
   box-sizing: border-box;
+
   position: relative;
 }
 .main_img {
@@ -122,7 +122,7 @@ export default {
   right: 26%;
   top: 39.5%;
   display: block;
-  padding: 39px 30px 53px 47px;
+  padding: 29px 15px 53px 47px;
   box-sizing: border-box;
 }
 .postion_content > p:nth-child(1) {
@@ -143,7 +143,7 @@ export default {
   font-weight: 400;
   color: rgba(96, 96, 96, 1);
   line-height: 30px;
-  margin-top: 23px;
+  margin-top: 10px;
 }
 
 .postion_color {
@@ -178,17 +178,17 @@ export default {
   color: rgba(255, 255, 255, 1);
   letter-spacing: 8px;
 }
-.about_bottom > p:nth-child(1) {
-  margin-right: 40px;
-}
+// .about_bottom > p:nth-child(1) {
+//   margin-right: 40px;
+// }
 .address {
   width: 100%;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .address > p {
   font-size: 21px;
   font-weight: 400;
-  font-family: " Source Han Sans CN";
+  font-family: "Source Han Sans CN";
   font-weight: 400;
   color: #646464;
   line-height: 33px;

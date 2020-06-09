@@ -9,7 +9,7 @@
         <p>自营商品</p>
       </div>
       <div class="self_assured">
-        <p>一站式购物 零距离服务</p>
+        <p>美味赢得放心 尽享品质生活</p>
       </div>
       <!-- 四个按钮 -->
       <div class="four_btn">

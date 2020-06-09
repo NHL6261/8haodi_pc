@@ -126,6 +126,8 @@ export default {};
   position: relative;
 }
 .Advantage_list > .offline > .left_img > img {
+  width: 100px;
+  height: 100px;
   position: absolute;
   left: 50%;
   top: 50%;

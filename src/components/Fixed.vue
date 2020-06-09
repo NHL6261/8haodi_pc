@@ -86,7 +86,6 @@ export default {
 <style lang="stylus" scoped>
 #fixed_container {
   width: 100%;
-
   .fixedBtn {
     position: fixed;
     top: 0;

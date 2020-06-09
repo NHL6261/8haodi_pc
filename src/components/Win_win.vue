@@ -18,13 +18,13 @@
           <el-form-item label="联系电话:" prop="fPhone">
             <el-input v-model="JoinForm.fPhone" placeholder="请输入您的联系电话"></el-input>
           </el-form-item>
-          <el-form-item label="申请选项:" prop="city" :style="'width:100%'">
-            <el-select v-model="JoinForm.fPost" placeholder="云服务收银系统及App商城代理">
-              <el-option label="App商城代理" value="App商城代理"></el-option>
-              <el-option label="云服务收银系统代理" value="云服务收银系统代理"></el-option>
+          <el-form-item label="申请选项:" prop="fPost" :style="'width:100%'">
+            <el-select v-model="JoinForm.fPost" placeholder="请输入您的申请选项">
+              <el-option label="自营产品代理" value="自营产品代理"></el-option>
+              <el-option label="云服务收银系统及App商城代理" value="云服务收银系统及App商城代理"></el-option>
             </el-select>
           </el-form-item>
-          <el-form-item label="城市选择:" prop="post">
+          <el-form-item label="输入城市:" prop="post">
             <el-input v-model="JoinForm.fCity" placeholder="请输入您的城市"></el-input>
           </el-form-item>
           <el-form-item label="留言:" prop="personal_profile">
@@ -38,26 +38,6 @@
           </el-form-item>
         </el-form>
       </div>
-      <!-- 弹出确定框 -->
-      <div class="pop_box">
-        <el-dialog
-          class="title_setting"
-          title="提交成功!"
-          :visible.sync="Testing_data"
-          width="13%"
-          modal:false
-        >
-          <!-- 底部区域 -->
-          <span slot="footer" class="dialog-footer">
-            <el-button
-              type="warning"
-              size="medium"
-              style="width: 50%"
-              @click="Testing_data = false"
-            >确 定</el-button>
-          </span>
-        </el-dialog>
-      </div>
     </div>
   </div>
 </template>
@@ -68,11 +48,19 @@ export default {
   data() {
     //   自定义验证规则
     var Name = (rule, value, callback) => {
-      const regNmae = /^[\u4e00-\u9fa5]+$/;
+      const regNmae = /^[\u4e00-\u9fa5]{2,12}$/;
       if (regNmae.test(value)) {
         return callback();
       } else {
-        callback(new Error("姓名由中文组成!"));
+        callback(new Error("请输入正确的姓名!"));
+      }
+    };
+    var Post = (rule, value, callback) => {
+      const regNmae = /^[\u4e00-\u9fa5]$/;
+      if (regNmae.test(value)) {
+        return callback();
+      } else {
+        callback(new Error("请选择正确的申请选项!"));
       }
     };
     var checkMobil = (rule, value, callback) => {
@@ -81,7 +69,7 @@ export default {
       if (regMobile.test(value)) {
         return callback();
       } else {
-        callback(new Error("请输入合法手机号!"));
+        callback(new Error("请输入正确的手机号!"));
       }
     };
     return {
@@ -108,6 +96,10 @@ export default {
         fPhone: [
           { required: true, message: "请输入您的手机号", trigger: "blur" },
           { validator: checkMobil, trigger: "blur" }
+        ],
+        // 申请选项验证
+        fPost: [
+          { required: true, message: "请输入您的申请选项", trigger: ["blur",'change'] },
         ]
       }
     };
@@ -118,8 +110,14 @@ export default {
       // 前端验证
       this.$refs.JoinForm.validate(async valid => {
         if (!valid) {
-          Message.error("请输入您的姓名或联系方式!");
+          Message.error("请检查您的信息准确性!");
         } else {
+          const loading = this.$loading({
+            lock: true,
+            text: "正在提交申请,请耐心等待",
+            spinner: "el-icon-loading",
+            background: "rgba(0, 0, 0, 0.7)"
+          });
           let result = await this.$HTTP.getGrowInfo({
             fName,
             fPhone,
@@ -129,11 +127,10 @@ export default {
             fType
           });
           if (result.status === 200) {
-            this.Testing_data = true;
-            this.JoinForm.fName = '',
-            this.JoinForm.fPost = '',
-            this.JoinForm.fPhone = '',
-            this.JoinForm.fCity = '',
+            loading.close();
+            Message.success("提交成功!");
+            this.$refs.JoinForm.resetFields()
+            this.JoinForm.fCity = ''
             this.JoinForm.text = ''
           } else {
             Message.error("网络开小差了~");
@@ -148,9 +145,9 @@ export default {
 <style lang="less" scoped>
 #win_container {
   width: 100%;
-  height: 838px;
+  height: 700px;
   background-image: url("../assets/images/申请背景-pc.png");
-  background-size: 100% 838px;
+  background-size: 100% 700px;
 }
 .input_container {
   width: 100%;

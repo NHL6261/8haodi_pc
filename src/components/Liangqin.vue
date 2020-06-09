@@ -382,7 +382,7 @@ export default {
   height: 678px;
   position: absolute;
   left: 30.6%;
-  top: 30.4%;
+  top: 30.6%;
   border-radius: 5%;
 }
 

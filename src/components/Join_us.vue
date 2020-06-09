@@ -23,7 +23,7 @@
         <div class="passion">
           <div class="passion_icon">
             <div class="icon">
-              <img src="../assets/images/激情.png" alt />
+              <img class="img_01" src="../assets/images/激情.png" alt />
             </div>
           </div>
           <div class="passion_title">
@@ -33,7 +33,7 @@
         <div class="passion">
           <div class="passion_icon">
             <div class="icon">
-              <img src="../assets/images/协作.png" alt />
+              <img class="img_02" src="../assets/images/协作.png" alt />
             </div>
           </div>
           <div class="passion_title">
@@ -43,7 +43,7 @@
         <div class="passion">
           <div class="passion_icon">
             <div class="icon">
-              <img src="../assets/images/高效.png" alt />
+              <img class="img_03" src="../assets/images/高效.png" alt />
             </div>
           </div>
           <div class="passion_title">
@@ -53,7 +53,7 @@
         <div class="passion">
           <div class="passion_icon">
             <div class="icon">
-              <img src="../assets/images/创新.png" alt />
+              <img class="img_04" src="../assets/images/创新.png" alt />
             </div>
           </div>
           <div class="passion_title">
@@ -67,13 +67,14 @@
       <Working></Working>
     </keep-alive>
   </div>
+  
 </template>
 
 <script type="text/ecmascript-6">
 import Working from "./Working";
 export default {
   components: {
-    Working
+    Working,
   }
 };
 </script>
@@ -167,6 +168,22 @@ export default {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+.atmposphere_main > .passion .passion_icon > .icon > .img_01 {
+  width: 106px;
+  height: 129px;
+}
+.atmposphere_main > .passion .passion_icon > .icon > .img_02 {
+  width: 129px;
+  height: 128px;
+}
+.atmposphere_main > .passion .passion_icon > .icon > .img_03{
+  width: 126px;
+  height: 127px;
+}
+.atmposphere_main > .passion .passion_icon > .icon > .img_04{
+  width: 114px;
+  height: 123px;
 }
 .atmposphere_main > .passion .passion_title {
   text-align: center;

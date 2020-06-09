@@ -52,7 +52,8 @@
     <Agent_process></Agent_process>
     <!-- 底部footer -->
     <win_win></win_win>
-    <router-view></router-view>
+    <div class="jiange"></div>
+    <Footer/>
   </div>
 </template>
 
@@ -61,12 +62,14 @@ import Service_Page from "./Service_Page";
 import Choose from "./choose_us";
 import Agent_process from "./Agent_process";
 import win_win from "./Win_win";
+import Footer from './Footer'
 export default {
   components: {
     Service_Page,
     Choose,
     Agent_process,
-    win_win
+    win_win,
+    Footer
   }
 };
 </script>
@@ -186,5 +189,10 @@ export default {
   font-weight: 400;
   color: rgba(96, 96, 96, 1);
   line-height: 104px;
+}
+.jiange{
+  width: 100%;
+  height: 38px;
+  background-color: #fff;
 }
 </style>

@@ -6,7 +6,7 @@
       </div>
       <div class="postion_content">
         <p>合肥八号地信息技术有限公司</p>
-        <p>网购惠天下,服务千万家</p>
+        <p>网购惠天下 服务千万家</p>
         <p>合肥八号地信息技术有限公司依托全球原产地、优品、甄选资源及八号地品牌优势,打造八号地食品网络购物平台。并在线上设有八号地的天猫淘宝京东商城,致力于为顾客提供更放心的购物体验。</p>
         <div class="address">
           <p>公司地址：安徽省合肥市包河区滨湖金融港B3座501室</p>
@@ -106,8 +106,8 @@ export default {};
   font-family: "Source Han Sans CN";
   font-weight: 400;
   color: rgba(96, 96, 96, 1);
-  line-height: 25px;
-  margin-top: 23px;
+  line-height: 30px;
+  margin-top: 10px;
 }
 .postion_content > p:nth-child(4) {
   font-size: 21px;
@@ -127,7 +127,7 @@ export default {};
 }
 .address {
   width: 100%;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .address > p {
   font-size: 21px;
