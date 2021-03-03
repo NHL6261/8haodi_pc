@@ -13,7 +13,7 @@
     "element-ui": "^2.4.5",
     "lib-flexible": "^0.3.2",
     "postcss-px2rem": "^0.3.0",
-    "pug": "^3.0.0",
+    "pug": "^3.0.1",
     "pug-plain-loader": "^1.0.0",
     "sass-loader": "^8.0.2",
     "stylus": "^0.54.7",
